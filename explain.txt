@@ -1,0 +1,22 @@
+markdown-to-html/
+├── public/
+│   └── images/                # Directory for static images used in your posts or site.
+├── src/
+│   ├── pages/                 # Contains the pages of your Next.js application.
+│   │   ├── index.tsx          # The main landing page of your application.
+│   │   └── [slug].tsx         # Dynamic route for individual posts based on their slug.
+│   ├── components/            # Reusable React components.
+│   │   └── Layout.tsx         # Layout component for consistent page structure.
+│   ├── lib/                   # Utility functions and libraries.
+│   │   ├── markdownToHtml.ts   # Function to convert Markdown to HTML.
+│   │   └── postsLoader.ts      # Function to load and parse Markdown posts.
+│   ├── types/                 # TypeScript type definitions.
+│   │   └── post.ts            # Interface defining the structure of a post object.
+│   └── styles/                # CSS styles for your application.
+│       └── globals.css        # Global styles applied across the application.
+├── posts/                     # Directory for Markdown files containing your blog posts.
+│   ├── example-post.md        # Example Markdown post file.
+│   └── another-post.md        # Another Markdown post file.
+├── package.json               # Project metadata and dependencies.
+├── tsconfig.json              # TypeScript configuration file.
+└── README.md                  # Documentation for your project.
