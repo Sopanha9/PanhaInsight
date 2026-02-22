@@ -12,5 +12,10 @@ export default async function Icon() {
   const file = await fs.readFile(
     path.join(process.cwd(), "public/images/me.jpg"),
   );
-  return file;
+  return new Response(file, {
+    headers: {
+      "Content-Type": "image/jpeg",
+      "Cache-Control": "public, max-age=86400",
+    },
+  });
 }
