@@ -1,6 +1,4 @@
 {
-  "buildCommand": "cd markdown-to-html && npm run build",
-  "outputDirectory": "markdown-to-html/.next",
-  "installCommand": "cd markdown-to-html && npm install",
+  "rootDirectory": "markdown-to-html",
   "framework": "nextjs"
 }
