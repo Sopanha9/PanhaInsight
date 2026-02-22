@@ -66,7 +66,8 @@ export async function markdownToHtml(markdown: string): Promise<string> {
 
   const result = await unified()
     .use(remarkParse)
-    .use(remarkRehype)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    .use(remarkRehype as any)
     .use(rehypeHighlight)
     .use(rehypeSanitize, sanitizeSchema)
     .use(rehypeStringify)
