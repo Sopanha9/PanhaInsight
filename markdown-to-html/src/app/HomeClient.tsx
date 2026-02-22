@@ -51,7 +51,7 @@ export default function HomeClient({ posts }: HomeClientProps) {
       ) : (
         <div className="post-list">
           {filteredPosts.map((post) => (
-            <Link key={post.slug} href={`/${post.slug}`}>
+            <Link key={post.slug} href={`/blog/${post.slug}`}>
               <article className="post-item">
                 <div className="post-item-content">
                   {post.coverImage ? (

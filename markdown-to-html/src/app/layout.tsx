@@ -58,7 +58,7 @@ export default function RootLayout({
           <div className="nav-content">
             <Link href="/" className="nav-brand">
               <div className="nav-logo">
-                <img src="./images/me.jpg" alt="Logo" />
+                <img src="/images/me.jpg" alt="Logo" />
               </div>
               <span className="nav-title">Panha!nsight.</span>
             </Link>
