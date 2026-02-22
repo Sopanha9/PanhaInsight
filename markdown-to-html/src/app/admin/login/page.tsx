@@ -10,7 +10,7 @@ function AdminLoginContent() {
   const [isFocused, setIsFocused] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
-  const redirect = searchParams.get("redirect") || "/admin";
+  const redirect = searchParams?.get("redirect") || "/admin";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
