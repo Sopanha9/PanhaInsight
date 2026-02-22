@@ -14,7 +14,9 @@ const LOCKOUT_MS = 30 * 60 * 1000; // 30 minutes lockout
 function getClientId(request: NextRequest): string {
   // Use IP + User-Agent for fingerprinting
   const forwarded = request.headers.get("x-forwarded-for");
-  const ip = forwarded ? forwarded.split(",")[0] : request.ip || "unknown";
+  const ip = forwarded
+    ? forwarded.split(",")[0].trim()
+    : (request.headers.get("x-real-ip") ?? "unknown");
   const userAgent = request.headers.get("user-agent") || "unknown";
   return crypto.createHash("sha256").update(`${ip}:${userAgent}`).digest("hex");
 }
